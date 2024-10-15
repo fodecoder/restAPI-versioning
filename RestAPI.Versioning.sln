@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestAPI.Versioning.Services
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestAPI.Versioning.API", "RestAPI.Versioning.API\RestAPI.Versioning.API.csproj", "{561A0A2F-E038-4E94-BB49-622AFA91E571}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{ED03AF70-48C2-43A9-BCAC-E0DE29DC302B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.DB", "Common.DB\Common.DB.csproj", "{7D829A5C-7BDA-4F14-8639-69276B58A2A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,9 +31,16 @@ Global
 		{561A0A2F-E038-4E94-BB49-622AFA91E571}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{561A0A2F-E038-4E94-BB49-622AFA91E571}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{561A0A2F-E038-4E94-BB49-622AFA91E571}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D829A5C-7BDA-4F14-8639-69276B58A2A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D829A5C-7BDA-4F14-8639-69276B58A2A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D829A5C-7BDA-4F14-8639-69276B58A2A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D829A5C-7BDA-4F14-8639-69276B58A2A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7D829A5C-7BDA-4F14-8639-69276B58A2A5} = {ED03AF70-48C2-43A9-BCAC-E0DE29DC302B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0123C815-DCDD-4426-8D3C-5574AB00C483}
