@@ -6,7 +6,8 @@ using RestAPI.Versioning.Interfaces.Service;
 namespace Inventory.API.Controllers
 {
     [ApiController]
-    [ApiVersion ( "1.0" )]
+    [ApiVersion ( 1.0 , Deprecated = true )]
+    [ApiVersion ( 2.0 )]
     [Route ( "v{version:apiVersion}/[controller]" )]
     public class ItemController : ControllerBase
     {
@@ -32,6 +33,15 @@ namespace Inventory.API.Controllers
         {
             _logger.Log ( LogLevel.Debug , $"Requested Item: {id}" );
             return _itemService.ReadItemAsync ( id );
+        }
+
+        [HttpGet ( "{id}" ), MapToApiVersion ( "2.0" )]
+        public async Task<Item> ReadItem2( [FromRoute] Guid id )
+        {
+            _logger.Log ( LogLevel.Debug , $"Requested Item: {id}" );
+            var retValue = await _itemService.ReadItemAsync ( id );
+            retValue.Description += " API version 2.0";
+            return retValue;
         }
 
         [HttpPut]
