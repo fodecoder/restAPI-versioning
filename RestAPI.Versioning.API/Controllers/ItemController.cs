@@ -1,3 +1,4 @@
+using Asp.Versioning;
 using Microsoft.AspNetCore.Mvc;
 using RestAPI.Versioning.Interfaces.Model;
 using RestAPI.Versioning.Interfaces.Service;
@@ -5,7 +6,8 @@ using RestAPI.Versioning.Interfaces.Service;
 namespace Inventory.API.Controllers
 {
     [ApiController]
-    [Route ( "[controller]" )]
+    [ApiVersion ( "1.0" )]
+    [Route ( "v{version:apiVersion}/[controller]" )]
     public class ItemController : ControllerBase
     {
         private readonly IItemService _itemService;
